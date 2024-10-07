@@ -1,5 +1,2 @@
-// This module is necessary because Webpack doesn't ship with
-// a version of path-browserify that includes path.posix, yet path-browserify IS path.posix
-import _path from 'path'
-
-export const path = _path.posix === undefined ? _path : _path.posix
+// Don't import anything from 'path' as Vite doesn't like that and we don't seem to 
+// be relying on those utilities anyway
